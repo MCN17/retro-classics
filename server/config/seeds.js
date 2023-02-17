@@ -2,7 +2,7 @@ const db = require('./connection');
 const { User, Product, Console } = require('../models');
 
 db.once('open', async () => {
-  await Category.deleteMany();
+  await Console.deleteMany();
 
   const consoles = await Console.insertMany([
     { name: "NES" },
