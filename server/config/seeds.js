@@ -24,7 +24,16 @@ db.once('open', async () => {
       image: "superMario3.jpg",
       console: consoles[0]._id,
       price: 20.99,
-      quantity: 20
+      quantity: 100
+    },
+    {
+      name: "The Legend of Zelda",
+      description:
+        "The Legend of Zelda, originally released in Japan as The Hyrule Fantasy: Zelda no Densetsu, is a 1986 action-adventure game developed and published by Nintendo.",
+      image: "theLegendOfZelda.jpg",
+      console: consoles[0]._id,
+      price: 29.99,
+      quantity: 100
     },
     {
         name: "Goldeneye",
@@ -32,8 +41,8 @@ db.once('open', async () => {
           "GoldenEye 007 is a 1997 first-person shooter developed by Rare and published by Nintendo for the Nintendo 64.",
         image: "Goldeneye.jpg",
         console: consoles[1]._id,
-        price: 29.99,
-        quantity: 20
+        price: 19.99,
+        quantity: 100
       },
       {
         name: "Super Smash Bros.",
@@ -42,7 +51,7 @@ db.once('open', async () => {
         image: "SuperSmashBros.jpg",
         console: consoles[1]._id,
         price: 39.99,
-        quantity: 20
+        quantity: 100
       },
       {
         name: "Conker's Bad Fur Day",
@@ -51,7 +60,7 @@ db.once('open', async () => {
         image: "ConkersBadFurDay.jpg",
         console: consoles[1]._id,
         price: 99.99,
-        quantity: 20
+        quantity: 100
       },
       {
         name: "Perfect Dark",
@@ -59,8 +68,8 @@ db.once('open', async () => {
           "Perfect Dark is a 2000 first-person shooter developed and published by Rare for the Nintendo 64.",
         image: "perfectDark.jpg",
         console: consoles[1]._id,
-        price: 99.99,
-        quantity: 20
+        price: 29.99,
+        quantity: 100
       },
       {
         name: "Super Mario kart",
@@ -69,7 +78,16 @@ db.once('open', async () => {
         image: "superMarioKart.jpg",
         console: consoles[4]._id,
         price: 15.99,
-        quantity: 20
+        quantity: 100
+      },
+      {
+        name: "Donkey Kong Country",
+        description:
+          "Donkey Kong Country is a 1994 platform game developed by Rare and published by Nintendo for the Super Nintendo Entertainment System. ",
+        image: "donkeyKongCountry.jpg",
+        console: consoles[4]._id,
+        price: 15.99,
+        quantity: 100
       },
       {
         name: "Aladdin",
@@ -78,7 +96,7 @@ db.once('open', async () => {
         image: "Aladdin.jpg",
         console: consoles[4]._id,
         price: 10.99,
-        quantity: 20
+        quantity: 100
       },
 
       {
@@ -88,7 +106,7 @@ db.once('open', async () => {
         image: "SonicTheHedgeHog.jpg",
         console: consoles[3]._id,
         price: 10.99,
-        quantity: 20
+        quantity: 100
       },
       {
         name: "Tekken Tag Tournament",
@@ -97,7 +115,7 @@ db.once('open', async () => {
         image: "tekkenTagTournament.jpg",
         console: consoles[2]._id,
         price: 21.99,
-        quantity: 20
+        quantity: 100
       },
 
     
