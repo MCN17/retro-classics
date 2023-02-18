@@ -18,13 +18,22 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
+      name: "Metroid",
+      description:
+        "Metroid[a] is an action-adventure game developed and published by Nintendo. The first installment in the Metroid series, it was originally released in Japan for the Family Computer Disk System peripheral beta version in August 1986. ",
+      image: "metroid.jpg",
+      console: consoles[0]._id,
+      price: 20.99,
+      quantity: 10
+    },
+    {
       name: "Super Mario 3",
       description:
         "Super Mario Bros. 3 is a platform game developed and published by Nintendo for the Nintendo Entertainment System.",
       image: "superMario3.jpg",
       console: consoles[0]._id,
       price: 20.99,
-      quantity: 100
+      quantity: 15
     },
     {
       name: "The Legend of Zelda",
@@ -33,7 +42,16 @@ db.once('open', async () => {
       image: "theLegendOfZelda.jpg",
       console: consoles[0]._id,
       price: 29.99,
-      quantity: 100
+      quantity: 10
+    },
+    {
+      name: "Dr. Mario",
+      description:
+        "Dr. Mario is a 1990 puzzle video game developed and published by Nintendo for the Nintendo Entertainment System, Famicom, and Game Boy.",
+      image: "drMario.jpg",
+      console: consoles[0]._id,
+      price: 20.99,
+      quantity: 10
     },
     {
         name: "Goldeneye",
@@ -60,7 +78,7 @@ db.once('open', async () => {
         image: "ConkersBadFurDay.jpg",
         console: consoles[1]._id,
         price: 99.99,
-        quantity: 100
+        quantity: 5
       },
       {
         name: "Perfect Dark",
@@ -78,7 +96,7 @@ db.once('open', async () => {
         image: "superMarioKart.jpg",
         console: consoles[4]._id,
         price: 15.99,
-        quantity: 100
+        quantity: 40
       },
       {
         name: "Donkey Kong Country",
@@ -87,7 +105,7 @@ db.once('open', async () => {
         image: "donkeyKongCountry.jpg",
         console: consoles[4]._id,
         price: 15.99,
-        quantity: 100
+        quantity: 30
       },
       {
         name: "Aladdin",
@@ -96,7 +114,7 @@ db.once('open', async () => {
         image: "Aladdin.jpg",
         console: consoles[4]._id,
         price: 10.99,
-        quantity: 100
+        quantity: 15
       },
 
       {
@@ -106,7 +124,25 @@ db.once('open', async () => {
         image: "SonicTheHedgeHog.jpg",
         console: consoles[3]._id,
         price: 10.99,
-        quantity: 100
+        quantity: 25
+      },
+      {
+        name: "ToeJam & Earl",
+        description:
+          "ToeJam & Earl is an action game developed by Johnson Voorsanger Productions and published by Sega for the Sega Mega Drive (Genesis) console. Released in 1991, it centers on ToeJam and Earl—alien rappers who have crash-landed on Earth.",
+        image: "ToeJam.jpg",
+        console: consoles[3]._id,
+        price: 10.99,
+        quantity: 20
+      },
+      {
+        name: "Earthworm Jim",
+        description:
+          "Earthworm Jim is a series of platform games[1] featuring an earthworm named Jim who wears a robotic suit and battles the forces of evil.",
+        image: "earthwormJim.jpg",
+        console: consoles[3]._id,
+        price: 10.99,
+        quantity: 15
       },
       {
         name: "Tekken Tag Tournament",
@@ -115,7 +151,25 @@ db.once('open', async () => {
         image: "tekkenTagTournament.jpg",
         console: consoles[2]._id,
         price: 21.99,
-        quantity: 100
+        quantity: 50
+      },
+      {
+        name: "Gran Turismo 4",
+        description:
+          "Gran Turismo 4 is a 2004 racing video game for the PlayStation 2, the fourth installment in the main Gran Turismo series and the sixth for the overall series",
+        image: "granTurismo4.jpg",
+        console: consoles[2]._id,
+        price: 21.99,
+        quantity: 45
+      },
+      {
+        name: "Grand Theft Auto: San Andreas",
+        description:
+          "Grand Theft Auto: San Andreas is a 2004 action-adventure game developed by Rockstar North and published by Rockstar Games.",
+        image: "sanAndreas.jpg",
+        console: consoles[2]._id,
+        price: 15.99,
+        quantity: 50
       },
 
     
