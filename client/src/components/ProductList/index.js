@@ -21,10 +21,10 @@ function ProductList({ currentConsole }) {
   }
 
   return (
-    <div className="my-2">
+    <div>
       <h2>Our Products:</h2>
       {products.length ? (
-        <div className="flex-row">
+        <div>
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}

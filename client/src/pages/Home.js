@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import ConsoleMenu from "../components/ConsoleMenu"
+
+import ProductList from "../components/ProductList";
+import ConsoleMenu from "../components/ConsoleMenu";
 
 const Home = () => {
     const [currentConsole, setConsole] = useState("");
@@ -7,6 +9,7 @@ const Home = () => {
   return (
     <div>
         <ConsoleMenu setConsole={setConsole} />
+        <ProductList currentConsole={currentConsole} />
     </div>
   );
 };
