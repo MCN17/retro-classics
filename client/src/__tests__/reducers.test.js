@@ -23,4 +23,25 @@ test("UPDATE_PRODUCTS", () => {
 
     expect(newState.products.length).toBe(3);
     expect(initialState.products.length).toBe(0);
-})
+});
+
+test("UPDATE_CONSOLES", () => {
+    let newState = reducer(initialState, {
+        type: UPDATE_CONSOLES, 
+        consoles: [{}, {}]
+    })
+
+    expect(newState.consoles.length).toBe(2);
+    expect(initialState.consoles.length).toBe(1);
+});
+
+test('UPDATE_CURRENT_CONSOLE', () => {
+    let newState = reducer(initialState, {
+      type: UPDATE_CURRENT_CONSOLE,
+      currentConsole: "2"
+    });
+  
+    expect(newState.currentConsole).toBe("2");
+    expect(initialState.currentConsole).toBe("3");
+  });
+
