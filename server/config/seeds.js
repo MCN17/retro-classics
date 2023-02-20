@@ -7,6 +7,7 @@ db.once('open', async () => {
   const consoles = await Console.insertMany([
     { name: "NES" },
     { name: "N64" },
+    { name: "Playstation" },
     { name: "Playstation 2" },
     { name: "Sega" },
     { name: "SNES" }
@@ -122,7 +123,7 @@ db.once('open', async () => {
         description:
           "Sonic the Hedgehog is a Japanese video game series and media franchise created by Sega. The franchise follows Sonic, an anthropomorphic blue hedgehog who battles the evil Doctor Eggman, a mad scientist. ",
         image: "SonicTheHedgeHog.jpg",
-        console: consoles[3]._id,
+        console: consoles[4]._id,
         price: 10.99,
         quantity: 25
       },
@@ -131,7 +132,7 @@ db.once('open', async () => {
         description:
           "ToeJam & Earl is an action game developed by Johnson Voorsanger Productions and published by Sega for the Sega Mega Drive (Genesis) console. Released in 1991, it centers on ToeJam and Earl—alien rappers who have crash-landed on Earth.",
         image: "ToeJam.jpg",
-        console: consoles[3]._id,
+        console: consoles[4]._id,
         price: 10.99,
         quantity: 20
       },
@@ -140,36 +141,63 @@ db.once('open', async () => {
         description:
           "Earthworm Jim is a series of platform games[1] featuring an earthworm named Jim who wears a robotic suit and battles the forces of evil.",
         image: "earthwormJim.jpg",
-        console: consoles[3]._id,
+        console: consoles[4]._id,
         price: 10.99,
         quantity: 15
+      },
+      {
+        name: "Crash Bandicoot: Warped",
+        description:
+          "Crash Bandicoot: Warped is a 1998 platform game developed by Naughty Dog and published by Sony Computer Entertainment for the PlayStation.",
+        image: "crashBandicootWarped.jpg",
+        console: consoles[2]._id,
+        price: 18.99,
+        quantity: 20
+      },
+      {
+        name: "Final Fantasy VII",
+        description:
+          "Final Fantasy VII is a 1997 role-playing video game developed by Square for the PlayStation console. It is the seventh main installment in the Final Fantasy series.",
+        image: "finalFantasyVII.jpg",
+        console: consoles[2]._id,
+        price: 18.99,
+        quantity: 20
+      },
+         {
+        name: "Metal Gear Solid",
+        description:
+          "Metal Gear Solid[c] is a stealth game developed by Konami and released for the PlayStation in 1998.",
+        image: "metalGearSolid.jpg",
+        console: consoles[2]._id,
+        price: 25.99,
+        quantity: 25
       },
       {
         name: "Tekken Tag Tournament",
         description:
           "Tekken Tag Tournament is a spin-off of Namco's Tekken fighting game series. It is the fourth installment in the Tekken fighting game series. ",
         image: "tekkenTagTournament.jpg",
-        console: consoles[2]._id,
+        console: consoles[3]._id,
         price: 21.99,
-        quantity: 50
+        quantity: 20
       },
       {
         name: "Gran Turismo 4",
         description:
           "Gran Turismo 4 is a 2004 racing video game for the PlayStation 2, the fourth installment in the main Gran Turismo series and the sixth for the overall series",
         image: "granTurismo4.jpg",
-        console: consoles[2]._id,
+        console: consoles[3]._id,
         price: 21.99,
-        quantity: 45
+        quantity: 35
       },
       {
         name: "Grand Theft Auto: San Andreas",
         description:
           "Grand Theft Auto: San Andreas is a 2004 action-adventure game developed by Rockstar North and published by Rockstar Games.",
         image: "sanAndreas.jpg",
-        console: consoles[2]._id,
+        console: consoles[3]._id,
         price: 15.99,
-        quantity: 50
+        quantity: 40
       },
 
     
