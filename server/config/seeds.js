@@ -95,7 +95,7 @@ db.once('open', async () => {
         description:
           "Super Mario Kart is a kart racing video game developed and published by Nintendo for the Super Nintendo Entertainment System. ",
         image: "superMarioKart.jpg",
-        console: consoles[4]._id,
+        console: consoles[5]._id,
         price: 15.99,
         quantity: 40
       },
@@ -104,7 +104,7 @@ db.once('open', async () => {
         description:
           "Donkey Kong Country is a 1994 platform game developed by Rare and published by Nintendo for the Super Nintendo Entertainment System. ",
         image: "donkeyKongCountry.jpg",
-        console: consoles[4]._id,
+        console: consoles[5]._id,
         price: 15.99,
         quantity: 30
       },
@@ -113,7 +113,7 @@ db.once('open', async () => {
         description:
           "Disney's Aladdin is a 1993 platform game developed and published by Capcom for the Super Nintendo Entertainment System, based on the 1992 animated Disney film of the same name. ",
         image: "Aladdin.jpg",
-        console: consoles[4]._id,
+        console: consoles[5]._id,
         price: 10.99,
         quantity: 15
       },

@@ -1,29 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
+import { useStoreContext } from "../../utils/GlobalState";
+import { UPDATE_PRODUCTS } from "../../utils/actions";
 
 import ProductItem from '../ProductItem';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 
 
-function ProductList({ currentConsole }) {
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
+function ProductList({ }) {
+  const [state, dispatch] = useStoreContext();
+  const { currentConsole } = state;
+  const { data } = useQuery(QUERY_PRODUCTS);
 
-  const products = data?.products || [];
+  // const products = data?.products || [];
+
+  useEffect(() => {
+    if (data) {
+      dispatch({
+        type: UPDATE_PRODUCTS, 
+        products: data.products
+      });
+    };
+  }, [data, dispatch]);
 
   function filterProducts() {
     if (!currentConsole) {
-      return products;
+      return state.products;
     }
 
-    return products.filter(
-      (product) => product.console._id === currentConsole
-    );
+    return state.products.filter(product => product.console._id === currentConsole);
   }
 
   return (
     <div>
       <h2>Our Products:</h2>
-      {products.length ? (
+      {state.products.length ? (
         <div>
           {filterProducts().map((product) => (
             <ProductItem
