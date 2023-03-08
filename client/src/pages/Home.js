@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
+// import components
 import ProductList from "../components/ProductList";
 import ConsoleMenu from "../components/ConsoleMenu";
+import Cart from "../components/Cart";
 
 const Home = () => {
 
@@ -9,6 +11,7 @@ const Home = () => {
     <div>
         <ConsoleMenu />
         <ProductList />
+        <Cart />
     </div>
   );
 };
