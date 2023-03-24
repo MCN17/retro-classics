@@ -3,11 +3,12 @@ import { UPDATE_CONSOLES, UPDATE_CURRENT_CONSOLE } from "../../utils/actions";
 import { useQuery } from '@apollo/client';
 import { useStoreContext } from "../../utils/GlobalState";
 import { QUERY_CONSOLES } from '../../utils/queries';
+import { idbPromise } from "../../utils/helpers";
 
-function ConsoleMenu({ }) {
+function ConsoleMenu() {
   const [state, dispatch] = useStoreContext();
   const { consoles } = state;
-  const { data: consoleData } = useQuery(QUERY_CONSOLES);
+  const { loading, data: consoleData } = useQuery(QUERY_CONSOLES);
   // const consoles = consoleData?.consoles || [];
 
   useEffect (() => {
@@ -18,8 +19,18 @@ function ConsoleMenu({ }) {
         type: UPDATE_CONSOLES, 
         consoles: consoleData.consoles
       });
+      consoleData.consoles.forEach(console => {
+        idbPromise("consoles", "put", console);
+      })
+    } else if (!loading) {
+      idbPromise("consoles", "get").then(consoles => {
+        dispatch({
+          type: UPDATE_CONSOLES, 
+          consoles: consoles
+        });
+      });
     }
-  }, [consoleData, dispatch])
+  }, [consoleData, loading, dispatch])
 
   const handleClick = id => {
     dispatch({
