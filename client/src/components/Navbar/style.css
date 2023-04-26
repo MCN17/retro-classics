@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.retroClassicsLink {
+    text-decoration: none;
+}
+
+.navLinks {
+    text-decoration: none;
+    margin: 0.2rem;
+    font-size: 1.2rem;
+}

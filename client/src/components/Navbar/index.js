@@ -1,6 +1,7 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import "./style.css";
 
 function Nav() {
 
@@ -9,12 +10,12 @@ function Nav() {
       return (
         <ul>
           <li>
-            <Link to="/orderHistory">
+            <Link className="navLinks" to="/orderHistory">
               Order History
             </Link>
           </li>
           <li>
-            <a href="/" onClick={() => Auth.logout()}>
+            <a href="/" className="navLinks" onClick={() => Auth.logout()}>
               Logout
             </a>
           </li>
@@ -24,12 +25,12 @@ function Nav() {
       return (
         <ul>
           <li>
-            <Link to="/signup">
+            <Link className="navLinks" to="/signup">
               Signup
             </Link>
           </li>
           <li>
-            <Link to="/login">
+            <Link className="navLinks" to="/login">
               Login
             </Link>
           </li>
@@ -39,14 +40,14 @@ function Nav() {
   }
 
   return (
-    <header className="flex-row px-1">
+    <header className="header">
       <h1>
-        <Link to="/">
+        <Link className="retroClassicsLink" to="/">
           Retro Classics
         </Link>
       </h1>
 
-      <nav>
+      <nav className="nav">
         {displayNavigation()}
       </nav>
     </header>
