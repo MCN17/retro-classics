@@ -4,6 +4,11 @@ import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import "./style.css";
+
+// import bootstrap components
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
 function ProductItem(item) {
 
@@ -48,20 +53,20 @@ function ProductItem(item) {
   } = item;
 
   return (
-    <div>
-      <Link to={`/products/${_id}`}>
-        <img
-          src={`/images/${image}`}
-          alt=""
-        />
-        <p>{name}</p>
-      </Link>
-      <div>
-        <div>{quantity} {pluralize("item", quantity)} in stock</div>
-        <span>${price}</span>
-      </div>
-      <button onClick={addToCart}>Add to cart</button>
-    </div>
+      <Card className="productCard" style={{ width: "20rem" }}>
+        <Card.Body>
+        <Link to={`/products/${_id}`}>
+          <Card.Img className="cardImage" variant="top"
+            src={`/images/${image}`}
+            alt=""
+          />
+          <Card.Title>{name}</Card.Title>
+        </Link>
+          <Card.Text>{quantity} {pluralize("item", quantity)} in stock</Card.Text>
+          <Card.Text>${price}</Card.Text>
+          <Button onClick={addToCart} variant="primary">Add to cart</Button>
+        </Card.Body>
+      </Card>
   );
 }
 

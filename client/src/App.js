@@ -8,6 +8,9 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+// import bootstrap
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 // import pages
 import Home from './pages/Home';
 import Detail from './pages/Detail';
