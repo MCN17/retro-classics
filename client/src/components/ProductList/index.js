@@ -7,6 +7,10 @@ import { idbPromise } from "../../utils/helpers";
 import ProductItem from '../ProductItem';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 
+// Import Bootstrap components
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
 
 function ProductList() {
   const [state, dispatch] = useStoreContext();
@@ -50,10 +54,10 @@ function ProductList() {
   }
 
   return (
-    <div>
+    <Row>
       <h2>Our Products:</h2>
       {state.products.length ? (
-        <div>
+        <Row className="justify-content-center">
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}
@@ -64,11 +68,11 @@ function ProductList() {
               quantity={product.quantity}
             />
           ))}
-        </div>
+        </Row>
       ) : (
         <h3>You haven't added any games yet!</h3>
       )}
-    </div>
+    </Row>
   );
 }
 

@@ -5,14 +5,18 @@ import ProductList from "../components/ProductList";
 import ConsoleMenu from "../components/ConsoleMenu";
 import Cart from "../components/Cart";
 
+// Import Bootstrap components
+import Container from "react-bootstrap/Container";
+
+
 const Home = () => {
 
   return (
-    <div>
+    <Container fluid>
         <ConsoleMenu />
         <ProductList />
         <Cart />
-    </div>
+    </Container>
   );
 };
 
