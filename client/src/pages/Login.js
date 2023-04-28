@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 
+// Import Bootstrap components
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
@@ -30,41 +36,43 @@ function Login(props) {
   };
 
   return (
-    <div>
+    <Row>
       <Link to="/signup">← Go to Signup</Link>
 
       <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div>
-          <label htmlFor="email">Email address:</label>
-          <input
+      <Col lg={4}>
+      <Form onSubmit={handleFormSubmit}>
+        <Form.Group>
+          <Form.Label htmlFor="email">Email address:</Form.Label>
+          <Form.Control
             placeholder="youremail@test.com"
             name="email"
             type="email"
             id="email"
             onChange={handleChange}
           />
-        </div>
-        <div>
-          <label htmlFor="pwd">Password:</label>
-          <input
+        </Form.Group>
+        <Form.Group>
+          <Form.Label htmlFor="pwd">Password:</Form.Label>
+          <Form.Control
             placeholder="******"
             name="password"
             type="password"
             id="pwd"
             onChange={handleChange}
           />
-        </div>
+        </Form.Group>
         {error ? (
           <div>
             <p>The provided credentials are incorrect</p>
           </div>
         ) : null}
         <div>
-          <button type="submit">Submit</button>
+          <Button type="submit">Submit</Button>
         </div>
-      </form>
-    </div>
+      </Form>
+      </Col>
+    </Row>
   );
 }
 

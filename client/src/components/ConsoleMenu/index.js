@@ -5,6 +5,11 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { QUERY_CONSOLES } from '../../utils/queries';
 import { idbPromise } from "../../utils/helpers";
 
+// import bootstrap components
+import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
 function ConsoleMenu() {
   const [state, dispatch] = useStoreContext();
   const { consoles } = state;
@@ -40,19 +45,21 @@ function ConsoleMenu() {
   };
 
   return (
-    <div>
-      <h2>Select a Console:</h2>
+    <Row className="justify-content-center">
+      <h2 className="text-center">Select a Console:</h2>
+      <Col lg={4}>
       {consoles.map((item) => (
-        <button
+        <Button className="m-1"
           key={item._id}
           onClick={() => {
             handleClick(item._id);
           }}
         >
           {item.name}
-        </button>
+        </Button>
       ))}
-    </div>
+      </Col>
+    </Row>
   );
 }
 
