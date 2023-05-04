@@ -6,6 +6,12 @@ import { idbPromise } from "../utils/helpers"
 //import components
 import Cart from "../components/Cart";
 
+// import bootstrap components
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+
 import { useStoreContext } from "../utils/GlobalState";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY, ADD_TO_CART, UPDATE_PRODUCTS } from "../utils/actions";
 
@@ -88,29 +94,34 @@ function Detail() {
   return (
     <>
       {currentProduct ? (
-        <div>
+        <Row className="justify-content-center">
           <Link to="/">← Back to Games</Link>
+          <Col lg={3}>
+            <Card className="mt-3">
+            <Card.Body>
+            <Card.Title>{currentProduct.name}</Card.Title>
 
-          <h2>{currentProduct.name}</h2>
+            <Card.Text>{currentProduct.description}</Card.Text>
 
-          <p>{currentProduct.description}</p>
+            <p>
+              <strong>Price:</strong>${currentProduct.price}{' '}
+              <Button className="me-1" onClick={addToCart}>Add to Cart</Button>
+              <Button
+              disabled={!cart.find(game => game._id === currentProduct._id)}
+              onClick={removeFromCart}
+              >Remove from Cart</Button>
+            </p>
 
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
-            <button onClick={addToCart}>Add to Cart</button>
-            <button
-            disabled={!cart.find(game => game._id === currentProduct._id)}
-            onClick={removeFromCart}
-            >Remove from Cart</button>
-          </p>
-
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
-        </div>
+            <Card.Img
+              src={`/images/${currentProduct.image}`}
+              alt={currentProduct.name}
+            />
+            </Card.Body>
+            </Card>
+            <Cart />
+          </Col>
+        </Row>
       ) : null}
-      <Cart />
     </>
   );
 }
