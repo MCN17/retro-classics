@@ -36,41 +36,40 @@ function Login(props) {
   };
 
   return (
-    <Row>
+    <Row className="justify-content-center">
       <Link to="/signup">← Go to Signup</Link>
-
-      <h2>Login</h2>
-      <Col lg={4}>
-      <Form onSubmit={handleFormSubmit}>
-        <Form.Group>
-          <Form.Label htmlFor="email">Email address:</Form.Label>
-          <Form.Control
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label htmlFor="pwd">Password:</Form.Label>
-          <Form.Control
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </Form.Group>
-        {error ? (
-          <div>
-            <p>The provided credentials are incorrect</p>
+      <h2 className="text-center">Login</h2>
+      <Col lg={3}> 
+        <Form onSubmit={handleFormSubmit}>
+          <Form.Group>
+            <Form.Label htmlFor="email">Email address:</Form.Label>
+            <Form.Control
+              placeholder="youremail@test.com"
+              name="email"
+              type="email"
+              id="email"
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="pwd">Password:</Form.Label>
+            <Form.Control
+              placeholder="******"
+              name="password"
+              type="password"
+              id="pwd"
+              onChange={handleChange}
+            />
+          </Form.Group>
+          {error ? (
+            <div>
+              <p>The provided credentials are incorrect</p>
+            </div>
+          ) : null}
+          <div className="text-center mt-2">
+            <Button type="submit">Submit</Button>
           </div>
-        ) : null}
-        <div>
-          <Button type="submit">Submit</Button>
-        </div>
-      </Form>
+        </Form>
       </Col>
     </Row>
   );

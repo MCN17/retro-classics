@@ -3,6 +3,9 @@ import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import "./style.css";
 
+// Import Components
+import Cart from "../../components/Cart"
+
 function Nav() {
 
   function displayNavigation() {
@@ -33,6 +36,9 @@ function Nav() {
             <Link className="navLinks" to="/login">
               Login
             </Link>
+          </li>
+          <li>
+            <Cart/>
           </li>
         </ul>
       );

@@ -47,7 +47,7 @@ function ConsoleMenu() {
   return (
     <Row className="justify-content-center">
       <h2 className="text-center">Select a Console:</h2>
-      <Col lg={4}>
+      <Col className="text-center" lg={4}>
       {consoles.map((item) => (
         <Button className="m-1"
           key={item._id}

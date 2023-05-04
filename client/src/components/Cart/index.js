@@ -46,7 +46,9 @@ const Cart = () => {
     if (!state.cartOpen) {
         return (
             <div className="cartClosed" onClick={toggleCart}>
-                Shopping Cart
+                <span className="img" role="img" aria-label="cart">
+                    🛒
+                </span>
             </div>
         );
     };

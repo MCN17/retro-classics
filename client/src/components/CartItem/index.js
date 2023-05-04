@@ -39,7 +39,7 @@ const CartItem = ({ item }) => {
 
 
     return (
-        <div>
+        <div className="cartOpen">
             <div>
                 <img 
                     src={`/images/${item.image}`}

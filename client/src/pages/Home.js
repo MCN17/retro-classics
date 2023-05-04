@@ -15,7 +15,6 @@ const Home = () => {
     <Container fluid>
         <ConsoleMenu />
         <ProductList />
-        <Cart />
     </Container>
   );
 };
