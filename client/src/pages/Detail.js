@@ -34,18 +34,18 @@ function Detail() {
       dispatch({
         type: UPDATE_CART_QUANTITY, 
         _id: id, 
-        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
 
       // if updating quantity, use existing item data and increment purchaseQuantity value by one
       idbPromise("cart", "put", {
         ...itemInCart, 
-        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
     } else {
       dispatch({
         type: ADD_TO_CART, 
-        product: { ...currentProduct, purchaseQuantity: 1 }
+        product: { ...currentProduct, purchaseQuantity: 1 },
       });
 
       // if product isn't in the cart yet, add it to the current shopping cart in IndexedDB
@@ -118,7 +118,6 @@ function Detail() {
             />
             </Card.Body>
             </Card>
-            <Cart />
           </Col>
         </Row>
       ) : null}

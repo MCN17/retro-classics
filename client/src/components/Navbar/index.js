@@ -22,6 +22,9 @@ function Nav() {
               Logout
             </a>
           </li>
+          <li>
+            <Cart/>
+          </li>
         </ul>
       );
     } else {

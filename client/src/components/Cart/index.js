@@ -43,15 +43,6 @@ const Cart = () => {
         dispatch({ type: TOGGLE_CART });
     }
 
-    if (!state.cartOpen) {
-        return (
-            <div className="cartClosed" onClick={toggleCart}>
-                <span className="img" role="img" aria-label="cart">
-                    🛒
-                </span>
-            </div>
-        );
-    };
 
     function calculateTotal() {
         let sum = 0;
@@ -74,6 +65,16 @@ const Cart = () => {
             variables: { products: productIds }
         });
     }
+
+    if (!state.cartOpen) {
+        return (
+            <div className="cartClosed" onClick={toggleCart}>
+                <span className="img" role="img" aria-label="cart">
+                    🛒
+                </span>
+            </div>
+        );
+    };
 
     return (
         <div className="cart">

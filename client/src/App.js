@@ -17,6 +17,7 @@ import Detail from './pages/Detail';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Success from './pages/Success';
+import OrderHistory from "./pages/OrderHistory";
 
 // import components
 import Navbar from './components/Navbar';
@@ -57,6 +58,7 @@ function App() {
               <Route path="/signup" element={<Signup/>} />
               <Route path="/login" element={<Login/>} />
               <Route path="/success" element={<Success/>} />
+              <Route path="/orderhistory" element={<OrderHistory/>} />
             </Routes>
           </StoreProvider>
         </div>
