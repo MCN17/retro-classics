@@ -18,6 +18,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Success from './pages/Success';
 import OrderHistory from "./pages/OrderHistory";
+import LandingPage from "./pages/LandingPage";
 
 // import components
 import Navbar from './components/Navbar';
@@ -54,6 +55,7 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Home/>} />
+              <Route path="/landingpage" element={<LandingPage/>} />
               <Route path="/products/:id" element={<Detail/>} />
               <Route path="/signup" element={<Signup/>} />
               <Route path="/login" element={<Login/>} />

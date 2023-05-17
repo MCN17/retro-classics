@@ -1,0 +1,13 @@
+.main {
+    margin-top: 5rem;
+}
+
+.carousel-inner {
+    height: 64vh;
+    text-align: center;
+}
+
+.slideImg {
+    width: auto;
+    height: 37.5rem;
+}
