@@ -1,5 +1,6 @@
 .main {
     margin-top: 5rem;
+    text-align: center;
 }
 
 .carousel-inner {
@@ -10,4 +11,9 @@
 .slideImg {
     width: auto;
     height: 37.5rem;
+}
+
+.gamesButton {
+    padding: 0.3rem;
+    margin: 1rem 0rem 0rem 0rem;
 }
