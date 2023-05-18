@@ -20,9 +20,13 @@
     cursor: pointer;
 }
 
-.img {
-    margin: 0rem 1.5rem 0rem 0.3rem;
-    font-size: 1.5rem;
+.cartImage {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 0.2rem;
+    font-size: 1.2rem;
+    color: black;
   }
 
   .cartClosed {

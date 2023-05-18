@@ -3,6 +3,11 @@ import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import "./style.css";
 
+//import react icons
+import { faUser, faGamepad, faUserCircle, faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
 // Import Components
 import Cart from "../../components/Cart"
 
@@ -30,14 +35,22 @@ function Nav() {
     } else {
       return (
         <ul>
-          <li>
+          <li className="signup">
             <Link className="navLinks" to="/signup">
+              <FontAwesomeIcon icon={faUserCircle} />
               Signup
             </Link>
           </li>
           <li>
             <Link className="navLinks" to="/login">
+              <FontAwesomeIcon icon={faUser} />
               Login
+            </Link>
+          </li>
+          <li>
+            <Link className="navLinks" to="/home">
+              <FontAwesomeIcon icon={faGamepad} />
+               Games
             </Link>
           </li>
           <li>

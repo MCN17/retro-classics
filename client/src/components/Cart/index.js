@@ -7,6 +7,11 @@ import { idbPromise } from "../../utils/helpers";
 import { QUERY_CHECKOUT } from  "../../utils/queries";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from  "@apollo/client";
+import { Link } from "react-router-dom";
+
+//import react icons
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 //import components
 import CartItem from '../CartItem';
@@ -69,8 +74,11 @@ const Cart = () => {
     if (!state.cartOpen) {
         return (
             <div className="cartClosed" onClick={toggleCart}>
-                <span className="img" role="img" aria-label="cart">
-                    🛒
+                <span role="img" aria-label="cart">
+                    <Link className="cartImage">
+                        <FontAwesomeIcon icon={faCartShopping} />
+                        Cart
+                    </Link>
                 </span>
             </div>
         );
