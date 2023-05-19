@@ -24,6 +24,12 @@ function Nav() {
             </Link>
           </li>
           <li>
+            <Link className="navLinks" to="/home">
+              <FontAwesomeIcon icon={faGamepad} />
+               Games
+            </Link>
+          </li>
+          <li>
             <a href="/" className="navLinks" onClick={() => Auth.logout()}>
             <FontAwesomeIcon icon={faRightFromBracket} rotation={180} />
               Logout
