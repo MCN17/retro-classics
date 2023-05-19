@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 //import react icons
-import { faUser, faGamepad, faUserCircle, faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faGamepad, faUserCircle, faCartShopping, faReceipt, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
@@ -19,11 +19,13 @@ function Nav() {
         <ul>
           <li>
             <Link className="navLinks" to="/orderHistory">
+              <FontAwesomeIcon icon={faReceipt} />
               Order History
             </Link>
           </li>
           <li>
             <a href="/" className="navLinks" onClick={() => Auth.logout()}>
+            <FontAwesomeIcon icon={faRightFromBracket} rotation={180} />
               Logout
             </a>
           </li>
