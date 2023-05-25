@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //import components
 import CartItem from '../CartItem';
 
-const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
+const stripePromise = loadStripe("pk_test_51NBdiRFrqz9kp4zjff8NH6O1GjSoAvJlN6ajXPFpTtSVodXzaYQ7UEsTXijQ6pZ5KE0gHaECRXRMsp5pkkUiqRqQ00Js1zKE7b");
 
 
 
