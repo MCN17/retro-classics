@@ -55,7 +55,7 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     }, 
     checkout: async (parent, args, context) => {
-      const url = new URL(context.headers.referer).origin;
+      const url = "https://thawing-headland-75590.herokuapp.com/"
       const order = new Order({ products: args.products });
       const line_items = [];
       const { products } = await order.populate("products");
