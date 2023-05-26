@@ -87,7 +87,7 @@ const resolvers = {
         payment_method_types: ["card"], 
         line_items, 
         mode: "payment", 
-        success_url: `https://thawing-headland-75590.herokuapp.com/success?session_id={CHECKOUT_SESSION_ID}`,
+        success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`
       });
       return { session: session.id };
