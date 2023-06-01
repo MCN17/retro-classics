@@ -3,6 +3,9 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
+// import css
+import "./style.css";
+
 // import bootstrap components
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -50,19 +53,16 @@ const CartItem = ({ item }) => {
                     src={`/images/${item.image}`}
                     alt=""
                 />
-            <div>
-                <div>{item.name}, ${item.price}</div>
-                <div>
-                    <span>Qty:</span>
+                <Card.Text>{item.name}, ${item.price}</Card.Text>
+                    <Card.Text>Qty:
                     <input
                         type="number"
                         placeholder="1"
                         value={item.purchaseQuantity}
                         onChange={onChange}
                     />
-                    <button onClick={() => removeFromCart(item)}>Remove Item</button>
-                </div>
-            </div>
+                    </Card.Text>
+                    <Button className="removeBtn" onClick={() => removeFromCart(item)}>Remove Item</Button>
         </Card.Body>
         </Card>
     );

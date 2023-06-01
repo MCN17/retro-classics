@@ -9,6 +9,9 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from  "@apollo/client";
 import { Link } from "react-router-dom";
 
+// import bootstrap components
+import Button from "react-bootstrap/Button";
+
 //import react icons
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -86,7 +89,7 @@ const Cart = () => {
 
     return (
         <div className="cart">
-            <div className="closeCart" onClick={toggleCart}>Close</div>
+            <Button className="closeCart" onClick={toggleCart}>Close</Button>
             <h3>Shopping Cart</h3>
             <div className="cartItems">
             {state.cart.length ? (
@@ -98,7 +101,7 @@ const Cart = () => {
                         Total: ${calculateTotal()}
                         {
                             Auth.loggedIn() ?
-                            <button onClick={submitCheckout}>Checkout</button>
+                            <Button onClick={submitCheckout}>Checkout</Button>
                             :
                             <span>Log in to checkout</span>
                         }
