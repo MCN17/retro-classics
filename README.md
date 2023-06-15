@@ -20,6 +20,8 @@ shopping cart and then checkout and pay using Stripe.
 https://thawing-headland-75590.herokuapp.com/
 
 ![image](https://github.com/MCN17/retro-classics/assets/104735194/5ac8c76d-b154-487b-98ae-558f62ff55b3)
+![image](https://github.com/MCN17/retro-classics/assets/104735194/017b9909-29f7-44ac-9948-b0d70974e0e7)
+
 
 ## Credits
 This application was built by Marty Nolan.
