@@ -22,6 +22,9 @@ const LandingPage = () => {
                     <Carousel.Item>
                         <img className="slideImg" src="/images/slidePic2.jpg" alt="sega genesis console"/>
                     </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="slideImg" src="/images/slidePic3.jpg" alt="Sony Playstation console"/>
+                    </Carousel.Item>
                 </Carousel>
                 <Link to="/home"><Button className="gamesButton">View Games</Button></Link>
             </Row>

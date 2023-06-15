@@ -55,7 +55,7 @@ function ProductList() {
 
   return (
     <Row>
-      <h2>Our Products:</h2>
+      <h2>Our Games:</h2>
       {state.products.length ? (
         <Row className="justify-content-center">
           {filterProducts().map((product) => (

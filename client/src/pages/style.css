@@ -17,3 +17,12 @@
     padding: 0.3rem;
     margin: 1rem 0rem 0rem 0rem;
 }
+
+.orderHistoryMain {
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+.successMain {
+    text-align: center;
+    margin-top: 7rem;
+}

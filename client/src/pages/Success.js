@@ -3,6 +3,9 @@ import { useMutation } from "@apollo/client";
 import { ADD_ORDER } from "../utils/mutations";
 import { idbPromise } from "../utils/helpers";
 
+// Import Bootstrap components
+import Row from "react-bootstrap/Row";
+
 function Success() {
   const [addOrder] = useMutation(ADD_ORDER);
 
@@ -29,11 +32,11 @@ function Success() {
   }, [addOrder]);
 
   return (
-    <div>
-        <h1>Success!</h1>
+    <Row className="successMain">
+        <h1>Your order has been processed!</h1>
         <h2>Thank you for shopping at Retro Classics!</h2>
         <h2>You will now be redirected to the home page</h2>
-    </div>
+    </Row>
   );
 }
 
